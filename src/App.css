@@ -1,38 +1,240 @@
-.App {
+@font-face {
+  font-family: tamagotchi-font;
+  src: url("content/pixelmix.ttf");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.pixel {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+#background {
+  position: absolute;
+  margin: none;
+  background-color: #003866;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#tamagotchi-image {
+  object-fit: cover;
+  scale: .98;
+  height: 100%;
+  filter: drop-shadow(10px 10px 10px #424141);
+  user-select: none;
+}
+
+.bar {
+  height: 8vh;
+  width: 66vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon {
+  width:10%;
+  height: 70%;
+  opacity: .5;
+}
+
+#attention {
+  width:10%;
+  height: 70%;
+  opacity: .5;
+}
+
+.icon-select {
+  opacity: 1;
+  transition: opacity .25s;
+}
+
+#screen {
+  position: absolute;
+  height: 55.7vh;
+  width: 65.3vh;
+  top: 9.2%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+#tamagotchi {
+  position: absolute;
+  width: 17vh;
+  left: 37%;
+}
+
+#button-container {
+  position: absolute;
+  bottom: 0%;
+  width: 66vh;
+  height: 27vh;
+  transform-origin: top;
+}
+
+.button {
+  padding: none;
+  margin: none;
+  background-color: transparent;
+  position:absolute;
+  border: none;
+  width: 20%;
+  height: 48.4%;
+}
+
+#choose-button {top: 23%;} #enter-button {top: 47.5%;left: 39.6%;} #cancel-button {top: 23%;right: 0%;}
+
+.text {
+  font-family: tamagotchi-font;
+  position: absolute;
+  font-size: 12vh;
+}
+
+#name-text {
+  top: 5%;
+  left: 5%;
+}
+
+.name-input {
+  position: relative;
+  text-transform: uppercase;
+  margin: none;
+  padding: 0px;
+  border: none;
   text-align: center;
+  background-color: transparent;
+  height: fit-content;
+  font-size: 14vh;
+  outline: none;
+  width: 20%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#name-input-container {
+  display: flex;
+  width: 100%
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#name-input::placeholder {
+  color: rgba(0, 0, 0, 0.5)
+}
+
+#caret-container {
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  display: flex;
+}
+
+.caret{
+  width: 20%;
+  height: 100%;
+}
+
+#caret-blink {
+  background-color: black;
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.play {
+  height: 100%;
+  width: 100%;
+  position: absolute;
   display: flex;
   flex-direction: column;
+}
+
+.play-text {
+  text-transform: uppercase;
+  position: relative;
+}
+
+.play-icon {
+  height: 94%;
+  width: 20%;
+}
+
+.play-icon-container {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1%;
+}
+
+.feed-cursor {
+  width: 7%;
+  height: 40%;
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.feed-text-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#tamagotchi-animation {
+  width: 17vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#food-animation {
+  width: 17vh;
+  height: 17vh;
+}
+
+#wash {
+  position: absolute;
+  width:20%;
+  height: 100.3%;
+  right: 0%;
+}
+
+#washing {
+  position: absolute;
+  width:20%;
+  height: 100.3%;
+  right: 80%;
+  transition: right 1.5s;
+  transition-timing-function: linear;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: end;
+  width: 100%;
+}
+
+.game-tamagotchi-flip {
+  transform: scaleX(-1);
 }
