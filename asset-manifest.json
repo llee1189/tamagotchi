@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tamagotchi/static/css/main.f2bfdd8e.css",
-    "main.js": "/tamagotchi/static/js/main.7e6bda88.js",
+    "main.js": "/tamagotchi/static/js/main.4ecbf3c6.js",
     "static/media/alert.wav": "/tamagotchi/static/media/alert.1860c878ec34c27f21b2.wav",
     "static/media/angry.wav": "/tamagotchi/static/media/angry.6302aed5e27c059090b6.wav",
     "static/media/happy.wav": "/tamagotchi/static/media/happy.c86e038cadae0349e143.wav",
@@ -12,10 +12,10 @@
     "static/media/pixelmix.ttf": "/tamagotchi/static/media/pixelmix.43079f34c6d2a831a3d5.ttf",
     "index.html": "/tamagotchi/index.html",
     "main.f2bfdd8e.css.map": "/tamagotchi/static/css/main.f2bfdd8e.css.map",
-    "main.7e6bda88.js.map": "/tamagotchi/static/js/main.7e6bda88.js.map"
+    "main.4ecbf3c6.js.map": "/tamagotchi/static/js/main.4ecbf3c6.js.map"
   },
   "entrypoints": [
     "static/css/main.f2bfdd8e.css",
-    "static/js/main.7e6bda88.js"
+    "static/js/main.4ecbf3c6.js"
   ]
 }
