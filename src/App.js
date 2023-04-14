@@ -168,7 +168,7 @@ function App() {
         }
         document.getElementsByClassName("name-input")[nameIndex].value = temp[nameIndex]
       } else if (mode == "default") {
-        if (iconIndex == document.getElementsByClassName("icon").length - 2) {
+        if (iconIndex == document.getElementsByClassName("icon").length - 1) {
           setIconIndex(-1)
         } else {
           setIconIndex(iconIndex + 1)
@@ -731,11 +731,6 @@ function App() {
   }
 
   const SleepHandler = () => {
-    if (cookies.sleep != "true") {
-      document.getElementById("sound-audio").src = require("./audio/alert.wav")
-      document.getElementById("sound-audio").play()
-      setCookie('attention', 'true', { path: '/' })
-    }
     setCookie('sleep', 'true', { path: '/' })
     if (document.getElementById("tamagotchi") != undefined) {
       document.getElementById("tamagotchi").style.left = "37%"
